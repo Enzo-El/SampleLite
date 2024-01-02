@@ -1,135 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-  
-    <!--- Student Name: Iverson Craig Gonzales Guno --->
-    <!--- Student Name: Roy Icaranom Manaog --->
-    <!--- Student Name: Lorenzo Laurel Reyes --->
-    <!--- Class Batch: WD92P (ZetoRo) --->
-    <!--- MP2 Group No.: Group 3 KonohaGakure --->
-    <!--- Schedule: 7:00pm to 10:00pm --->
-    <!--- Instructor: Ma'am Jamie Delina --->
-    <!--- Coordinator: Sir Ben De Leon --->
-    
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-        
-        <title>User Blotter Page</title>
-        
-        <!--- Montserrat Font --->
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-        
-        <!--- Material Icons --->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
-        
-        <!--Bootstrap 5 icons CDN-->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <!--- Student Name: Iverson Craig Gonzales Guno --->
+  <!--- Student Name: Roy Icaranom Manaog --->
+  <!--- Student Name: Lorenzo Laurel Reyes --->
+  <!--- Class Batch: WD92P (ZetoRo) --->
+  <!--- MP2 Group No.: Group 3 KonohaGakure --->
+  <!--- Schedule: 7:00pm to 10:00pm --->
+  <!--- Instructor: Ma'am Jamie Delina --->
+  <!--- Coordinator: Sir Ben De Leon --->
 
-        <!--- Custom CSS --->
-        <link rel="stylesheet" href="userStyle.css" />
-    </head>
-    
-        <body>
-            <div class="grid-container">
-                <!--- Header --->
-                <header class="header">
-                    <div class="menu-icon" onclick="openSidebar()">
-                        <span class="material-icons-outlined">menu</span>
-                    </div>
-                    
-                    <div class="header-right">
-                        <span>Hi User!</span>
-                        <span class="material-icons-outlined">account_circle</span>
-                    </div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 
-                </header>
-                <!--- End Header --->
+    <title>User Blotter Page</title>
 
-                <!--- Sidebar --->
-                <aside id="sidebar">
-                    <div class="sidebar-title">
-                        <div class="sidebar-brand">
-                            <span class="material-icons-outlined"></span> Online Blotter
-                        </div>
+    <!--- Montserrat Font --->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
 
-                        <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
-                    </div>
+    <!--- Material Icons --->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
 
-                    <ul class="sidebar-list">
-                        <li class="sidebar-list-item">
-                            <a href="accidentReport.html">
-                                <span class="material-icons-outlined">emergency</span> Accident Report
-                            </a>
-                        </li>
-                            
-                        <li class="sidebar-list-item">
-                            <a href="violenceReport.html">
-                                <span class="material-icons-outlined">voice_over_off</span> Violence-Related
-                            </a>
-                        </li>
-                        
-                        <li class="sidebar-list-item">
-                            <a href="theftAndRoberry.html">
-                                <span class="material-icons-outlined">paid</span> Theft and Robbery
-                            </a>
-                        </li>
-                        
-                        <li class="sidebar-list-item">
-                            <a href="missingPerson.html">
-                                <span class="material-icons-outlined">contact_emergency</span> Missing Persons
-                            </a>
-                        </li>
+    <!--Bootstrap 5 icons CDN-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
 
-                        <li class="sidebar-list-item">
-                            <a href="trafficRelated.html">
-                                <span class="material-icons-outlined">lan</span> Traffic-Related
-                            </a>
-                        </li>
+    <!--- Custom CSS --->
+    <link rel="stylesheet" href="userStyle.css" />
+  </head>
 
-                        <li class="sidebar-list-item">
-                            <a href="illegalActivities.html">
-                                <span class="material-icons-outlined">supervised_user_circle</span> Illegal Activities
-                            </a>
-                        </li>
-                        
-                        <li class="sidebar-list-item">
-                            <a href="communityRelations.html">
-                                <span class="material-icons-outlined">wc</span> Community Relations
-                            </a>
-                        </li>
-                        
-                        <li class="sidebar-list-item">
-                            <a href="healthAndSanitation.html">
-                                <span class="material-icons-outlined">health_and_safety</span> Health and Sanitation
-                            </a>
-                        </li>
-                        
-                        <li class="sidebar-list-item">
-                            <a href="environmental.html">
-                                <span class="material-icons-outlined">macro_off</span>Environmental Concerns
-                            </a>
-                        </li>
-                        
-                        <li class="sidebar-list-item">
-                            <a href="fireIncidents.html">
-                                <span class="material-icons-outlined">fire_truck</span> Fire Incidents
-                            </a>
-                        </li>
+  <body>
+    <div class="grid-container">
+      <!--- Header --->
+      <header class="header">
+        <div class="menu-icon" onclick="openSidebar()">
+          <span class="material-icons-outlined">menu</span>
+        </div>
 
-                        <li class="sidebar-list-item">
-                            <a href="animalRelated.html">
-                                <span class="material-icons-outlined">pets</span> Animal-Related
-                            </a>
-                        </li>
+        <div class="header-right">
+          <i class="bi bi-person-circle"></i>
+          <div>Hi <span id="UsersName">User</span></div>
+        </div>
+      </header>
+      <!--- End Header --->
 
-                        <li class="sidebar-list-item">
-                            <a href="logIn.html" target="_blank">
-                                <span class="material-icons-outlined">logout</span> Logout
-                            </a>
-                        </li>
-                    </ul>
-                </aside>
-                <!--- End Sidebar --->
+      <!--- Sidebar --->
+      <aside id="sidebar">
+        <div class="sidebar-title">
+          <div class="sidebar-brand">
+            <span class="material-icons-outlined"></span> Online Blotter
+          </div>
+
+          <span class="material-icons-outlined" onclick="closeSidebar()"
+            >close</span
+          >
+        </div>
+
+        <ul class="sidebar-list">
+          <li class="sidebar-list-item">
+            <a href="accidentReport.html">
+              <span class="material-icons-outlined">emergency</span> Accident
+              Report
+            </a>
+          </li>
+
+          <li class="sidebar-list-item">
+            <a href="violenceReport.html">
+              <span class="material-icons-outlined">voice_over_off</span>
+              Violence-Related
+            </a>
+          </li>
+
+          <li class="sidebar-list-item">
+            <a href="theftAndRoberry.html">
+              <span class="material-icons-outlined">paid</span> Theft and
+              Robbery
+            </a>
+          </li>
+
+          <li class="sidebar-list-item">
+            <a href="missingPerson.html">
+              <span class="material-icons-outlined">contact_emergency</span>
+              Missing Persons
+            </a>
+          </li>
+
+          <li class="sidebar-list-item">
+            <a href="trafficRelated.html">
+              <span class="material-icons-outlined">lan</span> Traffic-Related
+            </a>
+          </li>
+
+          <li class="sidebar-list-item">
+            <a href="illegalActivities.html">
+              <span class="material-icons-outlined"
+                >supervised_user_circle</span
+              >
+              Illegal Activities
+            </a>
+          </li>
+
+          <li class="sidebar-list-item">
+            <a href="communityRelations.html">
+              <span class="material-icons-outlined">wc</span> Community
+              Relations
+            </a>
+          </li>
+
+          <li class="sidebar-list-item">
+            <a href="healthAndSanitation.html">
+              <span class="material-icons-outlined">health_and_safety</span>
+              Health and Sanitation
+            </a>
+          </li>
+
+          <li class="sidebar-list-item">
+            <a href="environmental.html">
+              <span class="material-icons-outlined">macro_off</span
+              >Environmental Concerns
+            </a>
+          </li>
+
+          <li class="sidebar-list-item">
+            <a href="fireIncidents.html">
+              <span class="material-icons-outlined">fire_truck</span> Fire
+              Incidents
+            </a>
+          </li>
+
+          <li class="sidebar-list-item">
+            <a href="animalRelated.html">
+              <span class="material-icons-outlined">pets</span> Animal-Related
+            </a>
+          </li>
+
+          <li class="sidebar-list-item">
+            <a href="logIn.html" target="_blank">
+              <span class="material-icons-outlined">logout</span> Logout
+            </a>
+          </li>
+        </ul>
+      </aside>
+      <!--- End Sidebar --->
 
       <!--- Main --->
       <main class="main-container">
@@ -138,24 +158,24 @@
         </div>
 
         <div>
-            <table class="main-table">
+          <table class="main-table">
+            <thead>
+              <tr>
+                <th>Case No.</th>
+                <th>Complete Name</th>
+                <th>Residence</th>
+                <th>Email</th>
+                <th>Contact No.</th>
+                <th>Complaint</th>
+                <th>Description</th>
+                <th>Date of Incident</th>
+                <th>Picture</th>
+                <th>Status</th>
+              </tr>
+            </thead>
 
-                <thead>
-                    <tr>
-                        <th>Complete Name</th>
-                        <th>Residence</th>
-                        <th>Email</th>
-                        <th>Contact No.</th>
-                        <th>Complaint</th>
-                        <th>Description</th>
-                        <th>Date of Incident</th>
-                        <th>Picture</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
-
-                <tbody id="userTableBody"></tbody>
-            </table>
+            <tbody id="userTableBody"></tbody>
+          </table>
         </div>
 
         <br />
@@ -183,7 +203,8 @@
             <div class="card-inner">
               <h3>Open Complaints</h3>
               <span class="material-icons-outlined"
-                >notification_important</span>
+                >notification_important</span
+              >
             </div>
 
             <h1>0</h1>
@@ -195,6 +216,10 @@
     </div>
 
     <!--- Scripts --->
+    <!--- ApexCharts --->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.5/apexcharts.min.js"></script>
+
+    <!--- Custom JS --->
     <script src="userScript.js"></script>
   </body>
 </html>
