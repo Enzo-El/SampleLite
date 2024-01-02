@@ -32,11 +32,37 @@ function closeSidebar() {
 document.addEventListener('DOMContentLoaded', function () {
   // Load data from localStorage and display on the index page
   const userTableBody = document.getElementById('userTableBody');
-  const storedData = JSON.parse(localStorage.getItem('userData')) || [];
 
-  storedData.forEach(data => {
-      const row = document.createElement('tr');
-      row.innerHTML = `<td>${data.completeName}</td><td>${data.residence}</td><td>${data.email}</td><td>${data.phone}</td><td>${data.blotter}</td><td>${data.narrative}</td><td>${data.incidentDate}</td><td>${data.incidentPicture}</td>`;
-      userTableBody.appendChild(row);
-  });
+  function updateUserTable() {
+      const storedData = JSON.parse(localStorage.getItem('userData')) || [];
+
+      // Clear the existing table rows
+      userTableBody.innerHTML = '';
+
+      storedData.forEach(data => {
+          const row = document.createElement('tr');
+          row.innerHTML = `
+              <td>${data.caseNo}</td>
+              <td>${data.completeName}</td>
+              <td>${data.residence}</td>
+              <td>${data.email}</td>
+              <td>${data.phone}</td>
+              <td>${data.blotter}</td>
+              <td>${data.narrative}</td>
+              <td>${data.incidentDate}</td>
+              <td><img src="${data.photo}" alt="Incident Photo"></td>
+              <td>${data.status}</td>`;
+          userTableBody.appendChild(row);
+      });
+  }
+
+  // Call updateUserTable initially
+  updateUserTable();
+
+  // Periodically update the user table (you can adjust the interval based on your needs)
+  setInterval(updateUserTable, 5000); // Update every 5 seconds (for example)
 });
+
+function capitalizeFirstLetter(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
