@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <!--- Student Name: Iverson Craig Gonzales Guno --->
+    <!--- Student Name: Roy Icaranom Manaog --->
+    <!--- Student Name: Lorenzo Laurel Reyes --->
+    <!--- Class Batch: WD92P (ZetoRo) --->
+    <!--- MP2 Group No.: Group 3 KonohaGakure --->
+    <!--- Schedule: 7:00pm to 10:00pm --->
+    <!--- Instructor: Ma'am Jamie Delina --->
+    <!--- Coordinator: Sir Ben De Leon --->
+    
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        
+        <title>ACCIDENT REPORT</title>
+        
+        <!--- Montserrat Font --->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+        
+        <!--- Material Icons --->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+        
+        <!--Bootstrap 5 icons CDN-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+        <!--- Custom CSS --->
+        <link rel="stylesheet" href="userStyle.css" />
+    </head>
+    
+    <body>
+        <div class="grid-container">
+            <!--- Header --->
+            <header class="header">
+                <div class="menu-icon" onclick="openSidebar()">
+                    <span class="material-icons-outlined">menu</span>
+                </div>
+                    
+                <div class="header-right">
+                    <span>Hi User!</span>
+                    <span class="material-icons-outlined">account_circle</span>
+                </div>
+
+            </header>
+            <!--- End Header --->
+
+            <!--- Sidebar --->
+            <aside id="sidebar">
+                <div class="sidebar-title">
+                    <div class="sidebar-brand">
+                        <a href="userPage.html">
+                            <span class="material-icons-outlined"></span> Online Blotter
+                        </a>
+                    </div>
+
+                    <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+                </div>
+
+                <ul class="sidebar-list">
+                    <li class="sidebar-list-item">
+                        <a href="#">
+                            <span class="material-icons-outlined">emergency</span> Accident Report
+                        </a>
+                    </li>
+                            
+                    <li class="sidebar-list-item">
+                        <a href="violenceReport.html">
+                            <span class="material-icons-outlined">voice_over_off</span> Violence-Related
+                        </a>
+                    </li>
+                        
+                    <li class="sidebar-list-item">
+                        <a href="theftAndRoberry.html">
+                            <span class="material-icons-outlined">paid</span> Theft and Robbery
+                        </a>
+                    </li>
+                        
+                    <li class="sidebar-list-item">
+                        <a href="missingPerson.html">
+                            <span class="material-icons-outlined">contact_emergency</span> Missing Persons
+                        </a>
+                    </li>
+
+                    <li class="sidebar-list-item">
+                        <a href="trafficRelated.html">
+                            <span class="material-icons-outlined">lan</span> Traffic-Related
+                        </a>
+                    </li>
+
+                    <li class="sidebar-list-item">
+                        <a href="illegalActivities.html">
+                            <span class="material-icons-outlined">supervised_user_circle</span> Illegal Activities
+                        </a>
+                    </li>
+                        
+                    <li class="sidebar-list-item">
+                        <a href="communityRelations.html">
+                            <span class="material-icons-outlined">wc</span> Community Relations
+                        </a>
+                    </li>
+                        
+                    <li class="sidebar-list-item">
+                        <a href="healthAndSanitation.html">
+                            <span class="material-icons-outlined">health_and_safety</span> Health and Sanitation
+                        </a>
+                    </li>
+                        
+                    <li class="sidebar-list-item">
+                        <a href="environmental.html">
+                            <span class="material-icons-outlined">macro_off</span>Environmental Concerns
+                        </a>
+                    </li>
+                        
+                    <li class="sidebar-list-item">
+                        <a href="fireIncidents.html">
+                            <span class="material-icons-outlined">fire_truck</span> Fire Incidents
+                        </a>
+                    </li>
+
+                    <li class="sidebar-list-item">
+                        <a href="animalRelated.html">
+                            <span class="material-icons-outlined">pets</span> Animal-Related
+                        </a>
+                    </li>
+
+                    <li class="sidebar-list-item">
+                        <a href="logIn.html" target="_blank">
+                            <span class="material-icons-outlined">logout</span> Logout
+                        </a>
+                    </li>
+                </ul>
+            </aside>
+            <!--- End Sidebar --->
+
+            <!--- Main --->
+            <main class="main-body">
+                <div class="blotter-type">
+                    <h2>ACCIDENT REPORT</h2>
+                </div>
+
+                <br />
+
+                <div class="blotter-type">
+                    <p>This section is for accident related cases. There are four (4) types of accidents:</p>
+                    <li>Road Accident - Accidents that happened at and within the road.</li>
+                    <li>Home Accident - Accidents that happened at and within home premises.</li>
+                    <li>Office/Work Accident - Accidents that happened at and within workplace.</li>
+                    <li>General Accident - Other public accidents.</li>
+                </div>
+
+                <h1>Blotter Form</h1>
+
+	            <p>Please fill out this form with the required information</p>
+
+	            <form id="inputForm" method="" action=''>
+
+		            <fieldset>
+			            <label for="complete-name">Enter Your Complete Name: 
+                            <input id="complete-name" name="complete-name" type="text" required placeholder="ex. first name, middle name, last name" />
+                        </label>
+			                
+                        <label for="residence">Enter Your Residence Address: 
+                            <input id="residence" name="residence" type="text" required placeholder="ex. Brgy. Santa Cruz, Naga City, Camarines Sur" />
+                        </label>
+			                
+                        <label for="email">Enter Your Email: 
+                            <input id="email" name="email" type="email" required placeholder="ex. onlineblotter@gmail.com" />
+                        </label>
+			                
+                        <label for="phone">Enter your Contact No.: 
+                            <input name="phone" id="phone" minlength="11" maxlength="11" type="text" required placeholder="ex. 09123456789" />
+                        </label>
+		            </fieldset>
+
+		            <fieldset>
+                        <label for="blotter">What is the type of Accident?
+                            <select id="blotter" name="blotter">
+                                <option value="">(select one)</option>
+                                <option value="1">Road Accident</option>
+                                <option value="2">Home Accident</option>
+                                <option value="3">Office/Work Accident</option>
+                                <option value="4">General Accident</option>
+                            </select>
+                        </label>
+
+                        <label for="narrative">Narrative/Description of Incident:
+				            <textarea id="narrative" name="narrative" rows="6" cols="60" placeholder="This is what happened..."></textarea>
+			            </label>
+
+                        <label for="incident-date">Incident Date:
+                            <input id="incident-date" type="date" name="incident-date" required /></label>
+		                </label>
+
+                        <label for="incident-picture">Upload a Photo of Incident as proof: 
+                            <input id="incident-picture" type="file" name="incident-picture" />
+                        </label>
+		            </fieldset>
+
+                    <fieldset>
+                        <label for="terms-and-conditions">
+                            <input id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" class="inline" /> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a>
+			            </label>
+		            </fieldset>
+
+                    <input type="submit" value="Submit" />
+	            </form>
+            </main>
+
+            <!--- Scripts --->
+            <!--- ApexCharts 
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.5/apexcharts.min.js"></script>--->
+
+            <!--- Custom JS --->
+            <script src="accidentReport.js"></script>
+        </div>
+    </body>
+</html>
