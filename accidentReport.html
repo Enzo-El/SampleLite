@@ -38,8 +38,10 @@
                 </div>
                     
                 <div class="header-right">
-                    <span>Hi User!</span>
-                    <span class="material-icons-outlined">account_circle</span>
+                    <div class="header-right">
+                        <i class="bi bi-person-circle"></i>
+                        <div>Hi <span id="UsersName">User</span></div>
+                      </div>
                 </div>
 
             </header>
@@ -156,8 +158,8 @@
 	            <form id="inputForm" method="" action=''>
 
 		            <fieldset>
-			            <label for="complete-name">Enter Your Complete Name: 
-                            <input id="complete-name" name="complete-name" type="text" required placeholder="ex. first name, middle name, last name" />
+			            <label for="completeName">Enter Your Complete Name: 
+                            <input id="completeName" name="completeName" type="text" required placeholder="ex. first name, middle name, last name" />
                         </label>
 			                
                         <label for="residence">Enter Your Residence Address: 
@@ -177,10 +179,10 @@
                         <label for="blotter">What is the type of Accident?
                             <select id="blotter" name="blotter">
                                 <option value="">(select one)</option>
-                                <option value="1">Road Accident</option>
-                                <option value="2">Home Accident</option>
-                                <option value="3">Office/Work Accident</option>
-                                <option value="4">General Accident</option>
+                                <option value="Road Accident">Road Accident</option>
+                                <option value="Home Accident">Home Accident</option>
+                                <option value="Office/Work Accident">Office/Work Accident</option>
+                                <option value="General Accident">General Accident</option>
                             </select>
                         </label>
 
@@ -188,18 +190,18 @@
 				            <textarea id="narrative" name="narrative" rows="6" cols="60" placeholder="This is what happened..."></textarea>
 			            </label>
 
-                        <label for="incident-date">Incident Date:
-                            <input id="incident-date" type="date" name="incident-date" required /></label>
+                        <label for="incidentDate">Incident Date:
+                            <input id="incidentDate" type="date" name="incidentDate" required /></label>
 		                </label>
 
-                        <label for="incident-picture">Upload a Photo of Incident as proof: 
-                            <input id="incident-picture" type="file" name="incident-picture" />
+                        <label for="incidentPicture">Upload a Photo of Incident as proof: 
+                            <input id="incidentPicture" type="file" name="incidentPicture" accept="image/*" />
                         </label>
 		            </fieldset>
 
                     <fieldset>
                         <label for="terms-and-conditions">
-                            <input id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" class="inline" /> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a>
+                            <input id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" class="inline" /> I accept the <a href="#">terms and conditions</a>
 			            </label>
 		            </fieldset>
 
@@ -208,8 +210,8 @@
             </main>
 
             <!--- Scripts --->
-            <!--- ApexCharts 
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.5/apexcharts.min.js"></script>--->
+            <!--- ApexCharts --->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.5/apexcharts.min.js"></script>
 
             <!--- Custom JS --->
             <script src="accidentReport.js"></script>
